@@ -107,7 +107,7 @@ void ObjectSpawner::SpawnObjects()
 		char fullPath[256] = { 0 };
 		snprintf(fullPath, 256, "%s%s", Application::GetInstance()->GetCurDirectory(), m_sSpawnObjectSources[iRandObj]);
 
-		Object* pObj = GET_OBJECT_MANAGER()->CreateObjectBySource(m_sSpawnObjectSources[iRandObj]);
+		Object* pObj = GET_OBJECT_MANAGER()->CreateObjectBySource(fullPath);
 		int iCurRandCOunt = 0;
 
 		while (true)
