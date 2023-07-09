@@ -104,6 +104,9 @@ void ObjectSpawner::SpawnObjects()
 		int iRandY = (m_pLevelOwner->GetWorldPosition() + m_vPos).y + MinY + ((MaxY - MinY != 0) ? rand() % (MaxY - MinY) : 0);
 		int iRandZ = (m_pLevelOwner->GetWorldPosition() + m_vPos).z + MinZ + ((MaxZ - MinZ != 0) ? rand() % (MaxZ - MinZ) : 0);
 
+		char fullPath[256] = { 0 };
+		snprintf(fullPath, 256, "%s%s", Application::GetInstance()->GetCurDirectory(), m_sSpawnObjectSources[iRandObj]);
+
 		Object* pObj = GET_OBJECT_MANAGER()->CreateObjectBySource(m_sSpawnObjectSources[iRandObj]);
 		int iCurRandCOunt = 0;
 
