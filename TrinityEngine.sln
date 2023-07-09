@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectX11Base", "DirectX11Base\DirectX11Base.vcxproj", "{E0D4C5E6-6E4E-41E4-8D72-420F2FD24E2B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrinityEngine", "TrinityEngine\TrinityEngine.vcxproj", "{E0D4C5E6-6E4E-41E4-8D72-420F2FD24E2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
