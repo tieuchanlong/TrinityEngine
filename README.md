@@ -23,5 +23,6 @@ Known issues:
 
 ## Video Demo
 
-You can also view a video of the game demo from here:
+You can also view a video of the game demo from [here](https://drive.google.com/file/d/1hTUAlbKLin6nEQldu-iRcRYgb9prxzKs/view?usp=sharing).
+![](TrinityEngineDemo.gif)
 
