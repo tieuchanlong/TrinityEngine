@@ -22,7 +22,7 @@ int EngineKeyboard::Initialize()
 	int iRet = 0;
 
 	// Create keyboard and mouse
-	m_pKeyboard = std::make_unique<Keyboard>();
+	m_pKeyboard = new Keyboard();
 
 	return iRet;
 }

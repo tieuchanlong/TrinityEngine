@@ -21,7 +21,7 @@ protected:
 	EngineKeyboard();
 
 	static EngineKeyboard* instance;
-	std::unique_ptr<Keyboard> m_pKeyboard;
+	Keyboard* m_pKeyboard;
 	Keyboard::KeyboardStateTracker m_pTracker;
 	bool m_bTriggered;
 };

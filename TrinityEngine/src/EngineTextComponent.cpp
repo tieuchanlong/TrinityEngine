@@ -46,8 +46,8 @@ int EngineTextComponent::Initialize()
 {
 	int iRet = EngineRenderComponent::Initialize();
 
-	m_fFont = std::make_unique<SpriteFont>(Application::GetInstance()->GetDevice(), L"resources\\fonts\\myfile.spritefont");
-	m_sSpriteBatch = std::make_unique<SpriteBatch>(Application::GetInstance()->GetDeviceContext());
+	m_fFont = new SpriteFont(Application::GetInstance()->GetDevice(), L"resources\\fonts\\myfile.spritefont");
+	m_sSpriteBatch = new SpriteBatch(Application::GetInstance()->GetDeviceContext());
 
 	return iRet;
 }
@@ -98,7 +98,7 @@ int EngineTextComponent::Render()
 	XMFLOAT3 vPixelPos = Application::GetInstance()->GetMainCamera()->GetPositionInCameraPixelViewSpace(m_pOwner->GetWorldPosition() + m_vLocalPos);
 
 	XMVECTOR origin = m_fFont->MeasureString(m_sText) / 2.f;
-	m_fFont->DrawString(m_sSpriteBatch.get(), m_sText, XMLoadFloat3(&vPixelPos), Colors::White, 0.f, origin);
+	m_fFont->DrawString(m_sSpriteBatch, m_sText, XMLoadFloat3(&vPixelPos), Colors::White, 0.f, origin);
 
 	m_sSpriteBatch->End();
 
@@ -109,8 +109,8 @@ int EngineTextComponent::Destroy()
 {
 	int iRet = EngineRenderComponent::Destroy();
 
-	m_fFont.reset();
-	m_sSpriteBatch.reset();
+	SafeReleaseTemplate(m_fFont);
+	SafeReleaseTemplate(m_sSpriteBatch);
 	SafeReleaseTemplate(m_sText);
 
 	return iRet;

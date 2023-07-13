@@ -15,7 +15,7 @@ EngineMouse* EngineMouse::GetInstance()
 
 int EngineMouse::Initialize()
 {
-	m_pMouse = std::make_unique<Mouse>();
+	m_pMouse = new Mouse();
 	m_pMouse->SetWindow(*Application::GetInstance()->GetWindowHandle());
 	m_vLastMousePos = XMFLOAT2(m_pMouse->GetState().x, m_pMouse->GetState().y);
 

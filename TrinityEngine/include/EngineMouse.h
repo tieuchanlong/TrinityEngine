@@ -24,7 +24,7 @@ protected:
 	EngineMouse();
 
 	static EngineMouse* instance;
-	std::unique_ptr<Mouse> m_pMouse;
+	Mouse* m_pMouse;
 	Mouse::ButtonStateTracker m_pTracker;
 
 	XMFLOAT2 m_vLastMousePos;

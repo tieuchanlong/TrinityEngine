@@ -43,6 +43,6 @@ protected:
 	bool m_bLocked;
 	XMVECTOR m_vOriginalDistFromCameraFocus;
 
-	std::unique_ptr<SpriteFont> m_fFont;
-	std::unique_ptr<SpriteBatch> m_sSpriteBatch;
+	SpriteFont* m_fFont;
+	SpriteBatch* m_sSpriteBatch;
 };
