@@ -274,7 +274,6 @@ bool EngineUIContainer::ReadSaveData(rapidjson::Value::ConstValueIterator& itr)
 			EnginePanel* pPanel = new EnginePanel(XMFLOAT3(iXPos, iYPos, iZPos), XMFLOAT3(iSizeX, iSizeY, 0), XMFLOAT3(iColorR, iColorG, iColorB));
 			pPanel->SetObjectName(_strdup(sUIName));
 			AddUI(pPanel);
-			pPanel->Initialize();
 		}
 		break;
 		case UI_BUTTON:
@@ -291,7 +290,6 @@ bool EngineUIContainer::ReadSaveData(rapidjson::Value::ConstValueIterator& itr)
 			pButton->SetObjectName(_strdup(sUIName));
 			pButton->SetHighlightColor(XMFLOAT3(iHighlightColorR, iHighlightColorG, iHighlightColorB));
 			AddUI(pButton);
-			pButton->Initialize();
 		}
 		break;
 		case UI_TEXT:
@@ -300,7 +298,6 @@ bool EngineUIContainer::ReadSaveData(rapidjson::Value::ConstValueIterator& itr)
 			EngineText* pText = new EngineText(_strdup(sTest), XMFLOAT3(iXPos, iYPos, iZPos));
 			pText->SetObjectName(_strdup(sUIName));
 			AddUI(pText);
-			pText->Initialize();
 		}
 		break;
 		case UI_SELECTOR:
@@ -316,7 +313,6 @@ bool EngineUIContainer::ReadSaveData(rapidjson::Value::ConstValueIterator& itr)
 			EngineSelector* pSelector = new EngineSelector(XMFLOAT3(iXPos, iYPos, iZPos), XMFLOAT3(iSizeX, iSizeY, 0), XMFLOAT3(iTextX, iTextY, iTextZ), XMFLOAT3(iColorR, iColorG, iColorB));
 			pSelector->SetObjectName(_strdup(sUIName));
 			AddUI(pSelector);
-			pSelector->Initialize();
 		}
 		break;
 		case UI_SLIDER:
@@ -336,7 +332,6 @@ bool EngineUIContainer::ReadSaveData(rapidjson::Value::ConstValueIterator& itr)
 			EngineSlider* pSelector = new EngineSlider(XMFLOAT3(iXPos, iYPos, iZPos), XMFLOAT3(iSizeX, iSizeY, 0), XMFLOAT3(iTextX, iTextY, iTextZ), iValue, iIncreaseStep, iMinValue, iMaxValue, XMFLOAT3(iColorR, iColorG, iColorB));
 			pSelector->SetObjectName(_strdup(sUIName));
 			AddUI(pSelector);
-			pSelector->Initialize();
 		}
 		break;
 		}
